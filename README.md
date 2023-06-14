@@ -1,9 +1,9 @@
 Skizze
-# Eine Meta-Suchmaschine für zirkuläre Angebote
+# Eine Meta-Such-API für zirkuläre Angebote
 
 ## Worum geht es?
 
-In einer „Meta-Suchmaschine“ werden Organisationen von gebrauchtem Material und leihbaren Gegenständen verbunden. Die Suche ist nur lokal und gilt (ersteinmal) für Berlin. Die Suchmaschine liest Daten von für sie registrierten Plattformen bzw. Online-Datenbanken aus und integriert sie in einer zentrale Suche für Anfragen.
+In einer „Meta-Such-API“ werden Organisationen von gebrauchtem Material und leihbaren Gegenständen verbunden. Die Suche ist nur lokal und gilt (ersteinmal) für Berlin. Die Suchmaschine liest Daten von für sie registrierten Plattformen bzw. Online-Datenbanken aus und integriert sie in einer zentrale Suche für Anfragen.
 
 ## Wie soll das funktionieren?
 Die Plattformen selbst geben ihre Daten über eine hier zu definierende API (Programmier-Schnittstelle) im JSON Format frei. Die Meta-Suchmaschine, greift bei Suchanfragen dann auf alle verbundenen und erreichbaren Plattform Schnittstellen-Endpunkte zu und bietet Benutzer:innen dann 
@@ -13,8 +13,6 @@ Die Plattformen selbst geben ihre Daten über eine hier zu definierende API (Pro
 Mit nur einer einzigen Suche können User:innen gleichzeitig in verschiedenen Einrichtungen nach Material und Leihdingen suchen.
 Dies führt zu einer Vergrößerung der Zielgruppe, weil im Verbund mehr gefunden wird, als allein.
 Wenn User:innen mehr passende Angebote finden, bedeutet das auch mehr Umsatz.
-
-Die Meta-Suche soll vom mitgliederstarken BUND mitgetragen werden. Uns geht es um nachhaltigen Konsum, Reparieren, Wiederverwenden und Abfallvermeidung. Da der BUND schon die Plattform „Remap-Berlin“ betreibt, in der zirkuläre Organisationen gelistet sind, ist es ein sehr guter Partner.  
 
 ## Die Roadmap. Wie umsetzen?
  
