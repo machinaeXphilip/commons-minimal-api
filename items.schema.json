@@ -1,0 +1,54 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "$id": "https://github.com/machinaeXphilip/commons-minimal-api/blob/master/items.schema.json",
+    "title": "Commons Minimal Api Items Schema",
+    "version":"0.0.1",
+    "description": "A schema for items that can be found at sharing platforms",
+    "definitions": {
+        "item": {
+            "type": "object",
+            "properties": {
+                "id": { "type": "string" },
+                "name": { "type": "string" },
+                "url": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "direct link to the item on the platform or link to the platforms page"
+                },
+                "image": {
+                    "type": "string",
+                    "format": "uri"
+                },
+                "description": { 
+                    "type": "string",
+                    "description": "free human readable description of the item."
+                },
+                "location":{
+                    "description": "location where the item can be received from. should be obfuscated. tbd.",
+                    "$ref": "https://github.com/wielebenwir/commons-api/blob/master/commons-api.locations.schema.json#/definitions/location"
+                },
+                "reuse-category":{
+                    "type":"string",
+                    "enum": ["buy","borrow","gift","rent","depends"],
+                    "description": "how can this item be received? is it for sale for rent or can it be borrowed for free? If 'depends' is chosen, there SHOULD be some explanation in the description of the item"
+                },
+                "policy":{
+                    "type":"string",
+                    "enum":["anybody","network/friends only","members only"],
+                    "description": "policy describing who can get access to this item. Might be thing specific or all the same on the item providing platform."
+                }
+            },
+            "required": ["id", "name", "url", "reuse-category", "policy", "location"]
+        }
+    },
+    "type": "object",
+    "properties": {
+        "items": {
+            "type": "array",
+            "description": "The items that can be found, bought, booked, borrowed, rented from your site.",
+            "items": { "$ref": "#/definitions/item" },
+            "uniqueItems": true
+        }
+    },
+    "required": ["items"]
+}
