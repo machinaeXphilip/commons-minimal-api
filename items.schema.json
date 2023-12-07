@@ -24,10 +24,20 @@
                     "description": "free human readable description of the item."
                 },
                 "location":{
-                    "description": "location where the item can be received from. should be obfuscated. tbd.",
-                    "$ref": "https://github.com/wielebenwir/commons-api/blob/master/commons-api.locations.schema.json#/definitions/location"
+                   
+                   "type":"object",
+                    "properties": {
+                        "zip": {
+                            "type":"string",
+                            "description":"zip code where item can be found"
+                        },
+                        "geojson":{
+                            "description": "location where the item can be received from. should be obfuscated if not geofence/area. tbd.",
+                            "$ref": "https://github.com/wielebenwir/commons-api/blob/master/commons-api.locations.schema.json#/definitions/location"      
+                        }
+                    },
                 },
-                "reuse-category":{
+                "reuseCategory":{
                     "type":"string",
                     "enum": ["buy","borrow","gift","rent","depends"],
                     "description": "how can this item be received? is it for sale for rent or can it be borrowed for free? If 'depends' is chosen, there SHOULD be some explanation in the description of the item"
