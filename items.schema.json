@@ -44,8 +44,8 @@
                 },
                 "policy":{
                     "type":"string",
-                    "enum":["anybody","network/friends only","members only"],
-                    "description": "policy describing who can get access to this item. Might be thing specific or all the same on the item providing platform."
+                    "enum":["anybody","network/friends only","members only","other"],
+                    "description": "policy describing who can get access to this item. Might be thing specific or all the same on the item providing platform. anybody implies that no login is needed to contact the holder of the item, members only implies that you need a login, network/friends only implies that a login is needed and you might need to be added to a group of friends or another form of network to get access to the item, other indicates that there are other or mixed policies in place in order to get ahold of an item."
                 }
             },
             "required": ["id", "name", "url", "reuse-category", "policy", "location"]
