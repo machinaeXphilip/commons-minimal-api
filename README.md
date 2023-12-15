@@ -1,4 +1,4 @@
-Skizze
+Skizze / Working Draft
 # Eine Meta-Such-API für zirkuläre Angebote
 
 ## Worum geht es?
@@ -37,6 +37,15 @@ Auf einer zentralen Seite wird dann ein Suchformular angeboten dass auf die Date
 4) Reuse-Category: kaufen / leihen / schenken / mieten (enum)
 5) Policy (vorbedingung zu dingzugriff der jeweiligen plattform. Einige Plattformen werden das pro Ding definieren, andere werden dieselbe Kategorie auf alle dinge anwenden): hinz-und-kunz (alle duerfen anfragen), netzwerk/freund:innen (invite members only), mitglieder (benoetigt account auf der platform), other (für mischungen der vorgenannten oder situationen die anders sind und deshalb in der Beschreibung/description des Items beschrieben werden)
 6) URL zum Gegenstand in der anbietenden/verwaltenden Platform. Wenn direktlinks nicht möglich sind: Link zur Plattform/Leihort selbst (url)
+
+# Pagination
+pagination (das aufteilen von daten in mehrere seiten api seitig um es besser lesbar zu machen und nicht zuviel daten in einem haufen zu schicken) ist noch technisch genau zu durchdenken. Bis auf weiteres sollten wir pagination nicht verlangen aber erlauben und dann via [HTTP LINK HEADERS](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Link) implementieren.
+
+Dass heisst dass in der HTTP response ein `LINK` header beiliegen muss, der auf die nächste Seite via URL verweist und optional auch auf vorherige
+
+```
+link: <https://example.com/api/gegenstaende/?page=5>; rel="next", <https://example.com/api/gegenstaende/?page=3>; rel="prev","
+```
 
 # Wichtige Referenzen
 
