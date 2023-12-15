@@ -2,7 +2,7 @@
     "$schema": "http://json-schema.org/schema#",
     "$id": "https://github.com/machinaeXphilip/commons-minimal-api/blob/master/items.schema.json",
     "title": "Commons Minimal Api Items Schema",
-    "version":"0.0.2",
+    "version":"0.0.3",
     "description": "A schema for items that can be found at sharing platforms",
     "definitions": {
         "item": {
